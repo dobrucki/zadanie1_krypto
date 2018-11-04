@@ -14,6 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.text.Text?>
 <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="720.0" prefHeight="500.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EncryptApp.Controller">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" percentWidth="1.0" prefWidth="10.0" />
@@ -91,6 +92,11 @@
                   <Font name="Arial Black" size="12.0" />
                </font>
             </RadioButton>
+             <Text fx:id="status" style="-fx-fill: green;">
+                 <VBox.margin>
+                     <Insets bottom="15.0" left="15.0" right="15.0" top="5.0" />
+                 </VBox.margin>
+             </Text>
          </children>
       </VBox>
       <VBox fx:id="fileVBox" disable="true" visible="false" prefHeight="374.0" prefWidth="476.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -103,7 +109,7 @@
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
             </Label>
-            <Button mnemonicParsing="false" text="Plik">
+            <Button mnemonicParsing="false" text="Plik" onAction="#selectFile" fx:id="inputFileButton">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
@@ -119,7 +125,7 @@
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
             </Label>
-            <Button mnemonicParsing="false" text="Plik">
+            <Button mnemonicParsing="false" text="Plik" onAction="#selectFile" fx:id="outputFileButton">
                <font>
                   <Font name="Arial Black" size="12.0" />
                </font>
@@ -151,7 +157,7 @@
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
             </Label>
-            <TextField>
+            <TextField fx:id="selectedInputFile">
                <VBox.margin>
                   <Insets left="15.0" right="15.0" />
                </VBox.margin>
@@ -159,7 +165,7 @@
                   <Font name="Arial" size="12.0" />
                </font>
             </TextField>
-            <TextField>
+            <TextField fx:id="selectedOutputFile">
                <VBox.margin>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>

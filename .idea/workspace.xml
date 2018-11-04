@@ -61,8 +61,8 @@
       <file leaf-file-name="EncryptApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EncryptApp/EncryptApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="456">
+              <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#507#508#0" expanded="true" />
@@ -75,8 +75,8 @@
       <file leaf-file-name="Des.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Des/Des.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1444">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="-1862">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -102,35 +102,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gui.fxml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gui.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EncryptApp/gui.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1859">
-              <caret line="152" column="20" lean-forward="true" selection-start-line="151" selection-start-column="29" selection-end-line="152" selection-end-column="20" />
+            <state relative-caret-position="314">
+              <caret line="94" column="57" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/EncryptApp/Controller.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Des/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#530#531#0" expanded="true" />
-                <element signature="e#580#581#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="228">
+              <caret line="12" column="78" lean-forward="true" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Des/Main.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/EncryptApp/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="494">
+              <caret line="116" column="35" lean-forward="true" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,13 +162,13 @@
         <option value="$PROJECT_DIR$/src/EncryptApp/fileScene.fxml" />
         <option value="$PROJECT_DIR$/src/EncryptApp/textScene.fxml" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/EncryptApp/EncryptApp.java" />
         <option value="$PROJECT_DIR$/src/Des/Main.java" />
-        <option value="$PROJECT_DIR$/src/Des/Des.java" />
         <option value="$PROJECT_DIR$/src/Des/RandomKeyGenerator.java" />
         <option value="$PROJECT_DIR$/src/Des/ReadWriteFileToString.java" />
-        <option value="$PROJECT_DIR$/src/EncryptApp/Controller.java" />
+        <option value="$PROJECT_DIR$/src/Des/Des.java" />
         <option value="$PROJECT_DIR$/src/EncryptApp/gui.fxml" />
+        <option value="$PROJECT_DIR$/src/EncryptApp/EncryptApp.java" />
+        <option value="$PROJECT_DIR$/src/EncryptApp/Controller.java" />
       </list>
     </option>
   </component>
@@ -366,12 +364,12 @@
       <workItem from="1541004176687" duration="981000" />
       <workItem from="1541005530244" duration="4061000" />
       <workItem from="1541107054436" duration="412000" />
-      <workItem from="1541345152166" duration="6142000" />
+      <workItem from="1541345152166" duration="12433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24989000" />
+    <option name="totallyTimeSpent" value="31280000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -387,11 +385,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32943678" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49895832" visible="true" weight="0.40807652" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49895832" weight="0.40807652" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.13697916" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.13697916" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -623,17 +621,24 @@
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Des/RandomKeyGenerator.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="19">
+          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Des/Des.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1862">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EncryptApp/EncryptApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="456">
+          <caret line="24" column="19" lean-forward="true" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#507#508#0" expanded="true" />
@@ -642,21 +647,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Des/Des.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1444">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="4" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Des/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Des/RandomKeyGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -673,25 +664,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EncryptApp/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EncryptApp/gui.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1859">
-          <caret line="152" column="20" lean-forward="true" selection-start-line="151" selection-start-column="29" selection-end-line="152" selection-end-column="20" />
+        <state relative-caret-position="314">
+          <caret line="94" column="57" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Des/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="78" lean-forward="true" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EncryptApp/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="116" column="35" lean-forward="true" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
