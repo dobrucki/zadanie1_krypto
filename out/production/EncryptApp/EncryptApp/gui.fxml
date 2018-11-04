@@ -6,6 +6,7 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -13,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="720.0" prefHeight="500.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="720.0" prefHeight="500.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EncryptApp.Controller">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" percentWidth="1.0" prefWidth="10.0" />
     <ColumnConstraints hgrow="SOMETIMES" maxWidth="555.0" minWidth="10.0" percentWidth="70.0" prefWidth="407.0" />
@@ -26,7 +27,7 @@
     <RowConstraints maxHeight="10.0" minHeight="10.0" percentHeight="1.0" prefHeight="10.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <VBox prefHeight="374.0" prefWidth="476.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+      <VBox fx:id="textVBox" prefHeight="374.0" prefWidth="476.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
          <children>
             <Label prefHeight="17.0" prefWidth="450.0" text="Wejście">
                <font>
@@ -71,7 +72,7 @@
                   <Font name="Arial Black" size="14.0" />
                </font>
             </Button>
-            <RadioButton mnemonicParsing="false" selected="true" text="Szyfrowanie tekstu">
+            <RadioButton fx:id="textViewSelected" mnemonicParsing="false" selected="true" text="Szyfrowanie tekstu" onAction="#toggleView">
                <VBox.margin>
                   <Insets bottom="5.0" left="15.0" right="15.0" top="15.0" />
                </VBox.margin>
@@ -82,7 +83,7 @@
                   <ToggleGroup fx:id="methodSelect" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton mnemonicParsing="false" text="Szyfrowanie pliku" toggleGroup="$methodSelect">
+            <RadioButton fx:id="fileViewSelected" mnemonicParsing="false" text="Szyfrowanie pliku" toggleGroup="$methodSelect" onAction="#toggleView">
                <VBox.margin>
                   <Insets bottom="15.0" left="15.0" right="15.0" top="5.0" />
                </VBox.margin>
@@ -90,6 +91,63 @@
                   <Font name="Arial Black" size="12.0" />
                </font>
             </RadioButton>
+         </children>
+      </VBox>
+      <VBox fx:id="fileVBox" disable="true" visible="false" prefHeight="374.0" prefWidth="476.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label text="Plik wejściowy">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" text="Plik">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Label text="Plik wyjściowy">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" text="Plik">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </Button>
+            <Label text="Wybrane pliki">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TextField>
+               <VBox.margin>
+                  <Insets left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+            <TextField>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </TextField>
          </children>
       </VBox>
    </children>
