@@ -84,7 +84,6 @@ public class Controller {
            textVBox.setDisable(true);
            textVBox.setVisible(false);
            currentMethod = Method.FILE;
-           System.out.println(currentMethod);
         }
         else if(event.getSource().equals(textViewSelected)){
             fileVBox.setDisable(true);
@@ -92,7 +91,6 @@ public class Controller {
             textVBox.setDisable(false);
             textVBox.setVisible(true);
             currentMethod = Method.TEXT;
-            System.out.println(currentMethod);
         }
     }
 
