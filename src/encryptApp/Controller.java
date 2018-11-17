@@ -6,8 +6,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
-import javafx.scene.paint.Paint;
-import javafx.scene.text.Text;
+//import javafx.scene.paint.Paint;
+//import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -16,9 +16,9 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 
 public class Controller {
-    @FXML
-    private Text status;
-
+//    @FXML
+//    private Text status;
+//
 
     @FXML
     private VBox fileVBox;
@@ -54,10 +54,10 @@ public class Controller {
     private enum Method {
         TEXT, FILE
     }
-
-    private enum Status{
-        ERR, COM
-    }
+//
+//    private enum Status{
+//        ERR, COM
+//    }
 
     private Method currentMethod;
 
@@ -135,7 +135,7 @@ public class Controller {
         }
     }
 
-    public static byte[] hexStringToByteArray(String s) {
+    private static byte[] hexStringToByteArray(String s) {
         int len = s.length();
         byte[] data = new byte[len / 2];
         for (int i = 0; i < len; i += 2) {
@@ -157,14 +157,14 @@ public class Controller {
                 selectedOutputFile.setText(file.getPath());
             }
     }
-
-    private void setStatus(String text, Status s){
-        String beg = "";
-        if(s == Status.ERR){
-            beg = "Błąd: ";
-            status.setFill(Paint.valueOf("RED"));
-        }
-        status.setText(beg + text);
-    }
+//
+//    private void setStatus(String text, Status s){
+//        String beg = "";
+//        if(s == Status.ERR){
+//            beg = "Błąd: ";
+//            status.setFill(Paint.valueOf("RED"));
+//        }
+//        status.setText(beg + text);
+//    }
 
 }
