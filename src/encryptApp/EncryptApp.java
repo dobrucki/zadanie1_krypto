@@ -1,4 +1,4 @@
-package EncryptApp;
+package encryptApp;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,7 @@ public class EncryptApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         // Wybór algorytmu
-        setAlg("DES");
+        setAlg("Des");
 
         primaryStage.setTitle("Program szyfrujący");
         primaryStage.setScene(new Scene(FXMLLoader.load(getClass().getResource("gui.fxml"))));
@@ -24,7 +24,7 @@ public class EncryptApp extends Application {
     }
 
     public void setAlg(String alg) {
-        if(alg.equals("DES"))
+        if (alg.equals("Des"))
             this.alg = alg;
     }
 

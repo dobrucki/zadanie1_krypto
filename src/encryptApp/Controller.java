@@ -1,6 +1,7 @@
-package EncryptApp;
+package encryptApp;
 
 import com.sun.istack.internal.NotNull;
+import des.Des;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -11,9 +12,8 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Files;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 public class Controller {
     @FXML
@@ -51,11 +51,6 @@ public class Controller {
     @FXML
     private TextField selectedOutputFile;
 
-
-    private File inputFile;
-    private File outputFile;
-
-
     private enum Method {
         TEXT, FILE
     }
@@ -92,26 +87,27 @@ public class Controller {
     // Metoda szyfrujaca tekst z okna lub pliku
     @FXML
     private void encrypt() throws Exception{
-        String plainText = "";
-        String key = "";
-        String cipherText;
-        Des.Des des = Des.Des.getInstance();
+        byte[] plainText;
+        byte[] key;
+        byte[] cipherText;
+        Des des = new Des();
+        des.ReadWrite rw = new des.ReadWrite();
 
         if(currentMethod == Method.TEXT){
-            plainText = inputTextArea.getText();
-            key = keyText.getText();
+            plainText = inputTextArea.getText().getBytes(Charset.forName("UTF-8"));
+            key = keyText.getText().getBytes(Charset.forName("UTF-8"));
             cipherText = des.encrypt(plainText, key);
-            outputTextArea.setText(cipherText);
+            StringBuilder sb = new StringBuilder();
+            for (byte b : cipherText) {
+                sb.append(String.format("%02x", b));
+            }
+            outputTextArea.setText(sb.toString());
         }
         else if(currentMethod == Method.FILE){
-            if(inputFile != null && outputFile!= null){
-                plainText = readFile(inputFile);
-                key = keyFile.getText();
-                cipherText = des.encrypt(plainText, key);
-                FileWriter fw = new FileWriter(outputFile.getPath());
-                fw.write(cipherText);
-                fw.close();
-            }
+            plainText = rw.read(selectedInputFile.getText());
+            key = keyFile.getText().getBytes(Charset.forName("UTF-8"));
+            cipherText = des.encrypt(plainText, key);
+            rw.write(selectedOutputFile.getText(), cipherText);
         }
 
     }
@@ -119,51 +115,47 @@ public class Controller {
     // Metoda deszyfrujaca tekst z okna lub pliku
     @FXML
     private void decrypt() throws Exception{
-        String cipherText = "";
-        String key = "";
-        String plainText = "";
-        Des.Des des = Des.Des.getInstance();
+        byte[] plainText;
+        byte[] key;
+        byte[] cipherText;
+        Des des = new Des();
+        des.ReadWrite rw = new des.ReadWrite();
+
         if(currentMethod == Method.TEXT){
-            cipherText = inputTextArea.getText();
-            key = keyText.getText();
+            cipherText = hexStringToByteArray(inputTextArea.getText());
+            key = keyText.getText().getBytes(Charset.forName("UTF-8"));
             plainText = des.decrypt(cipherText, key);
-            outputTextArea.setText(plainText);
+            outputTextArea.setText(new String(plainText, StandardCharsets.UTF_8));
         }
         else if(currentMethod == Method.FILE){
-            if(inputFile != null && outputFile!= null){
-                cipherText = readFile(inputFile);
-                key = keyFile.getText();
-                plainText = des.decrypt(cipherText, key);
-                FileWriter fw = new FileWriter(outputFile.getPath());
-                fw.write(plainText);
-                fw.close();
-            }
+            cipherText = rw.read(selectedInputFile.getText());
+            key = keyFile.getText().getBytes(Charset.forName("UTF-8"));
+            plainText = des.decrypt(cipherText, key);
+            rw.write(selectedOutputFile.getText(), plainText);
         }
     }
+
+    public static byte[] hexStringToByteArray(String s) {
+        int len = s.length();
+        byte[] data = new byte[len / 2];
+        for (int i = 0; i < len; i += 2) {
+            data[i / 2] = (byte) ((Character.digit(s.charAt(i), 16) << 4)
+                    + Character.digit(s.charAt(i + 1), 16));
+        }
+        return data;
+    }
+
     @FXML
     private void selectFile(ActionEvent event){
         FileChooser fileChooser = new FileChooser();
         File file = fileChooser.showOpenDialog(new Stage());
         if(file != null)
             if(event.getSource().equals(inputFileButton)) {
-                inputFile = file;
                 selectedInputFile.setText(file.getPath());
             }
             else if(event.getSource().equals(outputFileButton)){
-                outputFile = file;
                 selectedOutputFile.setText(file.getPath());
             }
-    }
-
-    private String readFile(File file) throws Exception{
-        byte[] encoded = {};
-        try {
-            encoded= Files.readAllBytes(file.toPath());
-        }
-        catch(IOException e){
-            setStatus("Nie udało się odczytać z pliku!", Status.ERR);
-        }
-        return new String(encoded, "UTF-8");
     }
 
     private void setStatus(String text, Status s){
